@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'https://maven.badlogicgames.com' }
+    }
+    dependencies {
+        classpath 'com.badlogicgames.gdx:gdx-tools:1.11.0'  // Убедись, что используешь актуальные версии
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://maven.badlogicgames.com' }
+}
+
+dependencies {
+    implementation 'com.badlogicgames.gdx:gdx:1.11.0' // Основная библиотека
+    implementation 'com.badlogicgames.gdx:gdx-backend-lwjgl3:1.11.0' // Логика для десктопа
+    implementation 'com.badlogicgames.gdx:gdx-platform:1.11.0:natives-desktop' // Платформенные библиотеки
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
